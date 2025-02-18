@@ -1,0 +1,306 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "line": 4,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Antecedentes",
+        "steps": [
+          {
+            "result": {
+              "duration": 2706985200,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "que el usuario ingresa a la opción login",
+            "match": {
+              "arguments": [
+                {
+                  "val": "login",
+                  "offset": 35
+                }
+              ],
+              "location": "FormularioRegistroSteps.queElUsuarioIngresaAlFormularioDeRegistro(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 4624526800,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "ingresa las credenciales",
+            "match": {
+              "location": "LoginSteps.ingresaLasCredenciales(TestData\u003e)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "emailAddress",
+                  "password"
+                ]
+              },
+              {
+                "cells": [
+                  "andres_f0818@hotmail.com",
+                  "123456"
+                ]
+              }
+            ],
+            "keyword": "Cuando "
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 9633318500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "TestSetup.setUp()"
+            }
+          }
+        ],
+        "line": 11,
+        "name": "el usuario completa la compra exitosamente",
+        "description": "",
+        "id": "proceso-para-completar-compra;el-usuario-completa-la-compra-exitosamente",
+        "type": "scenario",
+        "keyword": "Escenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 1306345600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "que el usuario ingresa a la opción Laptops \u0026 Notebooks",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Laptops \u0026 Notebooks",
+                  "offset": 35
+                }
+              ],
+              "location": "FormularioRegistroSteps.queElUsuarioIngresaAlFormularioDeRegistro(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2140430100,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "el usuario ingresa a la opción Show All Laptops \u0026 Notebooks",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Show All Laptops \u0026 Notebooks",
+                  "offset": 31
+                }
+              ],
+              "location": "FormularioRegistroSteps.queElUsuarioIngresaAlFormularioDeRegistro(String)"
+            },
+            "keyword": "Y "
+          },
+          {
+            "result": {
+              "duration": 1831713600,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "agrega el producto MacBook Pro al carrito",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MacBook Pro",
+                  "offset": 19
+                }
+              ],
+              "location": "CompletarCompraSteps.agregarProductoDesdedListadoDeProductos(String)"
+            },
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 1583814300,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "el producto se agrega exitosamente al carrito Success: You have added",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Success: You have added",
+                  "offset": 46
+                }
+              ],
+              "location": "CompletarCompraSteps.puedeVerElTexto(String)"
+            },
+            "keyword": "Entonces "
+          },
+          {
+            "result": {
+              "duration": 3334653400,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "el usuario busca el producto Samsung Galaxy Tab 10.1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Samsung Galaxy Tab 10.1",
+                  "offset": 29
+                }
+              ],
+              "location": "CompletarCompraSteps.buscarAgragarProductoAlCarrito(String)"
+            },
+            "keyword": "Y "
+          },
+          {
+            "result": {
+              "duration": 1507130700,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "agrega el producto Samsung Galaxy Tab 10.1 al carrito",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Samsung Galaxy Tab 10.1",
+                  "offset": 19
+                }
+              ],
+              "location": "CompletarCompraSteps.agregarProductoDesdedListadoDeProductos(String)"
+            },
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 654116100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "el producto se agrega exitosamente al carrito Success: You have added",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Success: You have added",
+                  "offset": 46
+                }
+              ],
+              "location": "CompletarCompraSteps.puedeVerElTexto(String)"
+            },
+            "keyword": "Entonces "
+          },
+          {
+            "result": {
+              "duration": 1510232700,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "que el usuario ingresa a la opción Shopping Cart",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Shopping Cart",
+                  "offset": 35
+                }
+              ],
+              "location": "FormularioRegistroSteps.queElUsuarioIngresaAlFormularioDeRegistro(String)"
+            },
+            "keyword": "Dado "
+          },
+          {
+            "result": {
+              "duration": 2061110300,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "el usuario elimina del carrito el producto MacBook Pro",
+            "match": {
+              "arguments": [
+                {
+                  "val": "MacBook Pro",
+                  "offset": 43
+                }
+              ],
+              "location": "CompletarCompraSteps.eliminarProductoDelCarrito(String)"
+            },
+            "keyword": "Y "
+          },
+          {
+            "result": {
+              "duration": 3468698600,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "agrega 1 unidad del producto Samsung Galaxy Tab 10.1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 7
+                },
+                {
+                  "val": "Samsung Galaxy Tab 10.1",
+                  "offset": 29
+                }
+              ],
+              "location": "CompletarCompraSteps.modificarCantidadProducto(String,String)"
+            },
+            "keyword": "Y "
+          },
+          {
+            "result": {
+              "duration": 7652287900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "el usuario completa la compra",
+            "match": {
+              "location": "CompletarCompraSteps.completarCompra()"
+            },
+            "keyword": "Cuando "
+          },
+          {
+            "result": {
+              "duration": 435367200,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "la compra es completada con exito Your order has been successfully processed!",
+            "match": {
+              "arguments": [
+                {
+                  "val": "Your order has been successfully processed!",
+                  "offset": 34
+                }
+              ],
+              "location": "CompletarCompraSteps.mensajeCompraExitosa(String)"
+            },
+            "keyword": "Entonces "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@completarCompra"
+          }
+        ]
+      }
+    ],
+    "name": "Proceso para completar compra",
+    "description": "",
+    "id": "proceso-para-completar-compra",
+    "keyword": "Característica",
+    "uri": "src/test/resources/features/completar_compra.feature",
+    "tags": []
+  }
+]

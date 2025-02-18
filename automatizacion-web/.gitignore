@@ -24,8 +24,6 @@ dist/
 *.jar
 
 # Maven
-target/
-/target
 dist/
 
 # JetBrains IDE
