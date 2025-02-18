@@ -1,0 +1,98 @@
+{
+    "info": {
+        "name": "FakeStoreAPI Tests",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Get Electronics Products",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://fakestoreapi.com/products/category/electronics",
+                    "protocol": "https",
+                    "host": [
+                        "fakestoreapi",
+                        "com"
+                    ],
+                    "path": [
+                        "products",
+                        "category",
+                        "electronics"
+                    ]
+                }
+            },
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"El status code es 200\", function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});",
+                            "",
+                            "pm.test(\"El response no est\u00e1 vac\u00edo\", function () {",
+                            "    pm.response.to.not.be.empty;",
+                            "});",
+                            "",
+                            "pm.test(\"Todos los productos pertenecen a la categor\u00eda 'electronics'\", function () {",
+                            "    let jsonData = pm.response.json();",
+                            "    jsonData.forEach(product => {",
+                            "        pm.expect(product.category).to.eql(\"electronics\");",
+                            "    });",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        },
+        {
+            "name": "Get Specific Product",
+            "request": {
+                "method": "GET",
+                "header": [],
+                "url": {
+                    "raw": "https://fakestoreapi.com/products/1",
+                    "protocol": "https",
+                    "host": [
+                        "fakestoreapi",
+                        "com"
+                    ],
+                    "path": [
+                        "products",
+                        "1"
+                    ]
+                }
+            },
+            "event": [
+                {
+                    "listen": "test",
+                    "script": {
+                        "exec": [
+                            "pm.test(\"El status code es 200\", function () {",
+                            "    pm.response.to.have.status(200);",
+                            "});",
+                            "",
+                            "pm.test(\"El ID del producto coincide con el solicitado\", function () {",
+                            "    let jsonData = pm.response.json();",
+                            "    pm.expect(jsonData.id).to.eql(1);",
+                            "});",
+                            "",
+                            "pm.test(\"El producto tiene los campos obligatorios\", function () {",
+                            "    let jsonData = pm.response.json();",
+                            "    pm.expect(jsonData).to.have.property(\"title\");",
+                            "    pm.expect(jsonData).to.have.property(\"price\");",
+                            "    pm.expect(jsonData).to.have.property(\"category\");",
+                            "    pm.expect(jsonData).to.have.property(\"description\");",
+                            "    pm.expect(jsonData).to.have.property(\"image\");",
+                            "});"
+                        ],
+                        "type": "text/javascript"
+                    }
+                }
+            ]
+        }
+    ]
+}
